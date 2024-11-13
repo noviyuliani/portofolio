@@ -1,0 +1,616 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    background-color: #4b6584;
+    color: #f8f9fa;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 4px 8px rgba(127, 97, 37, 0.1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 1.5rem;
+    list-style: none;
+    margin: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #f5f8fa;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 10px;
+}
+
+.navbar a:hover {
+    background-color: #c1956d;
+    color: #242222;
+}
+
+nav a {
+    color: #f8f9fa;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #343434;
+}
+
+.hero {
+    background-color: #444444;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.intro-box {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.button-group {
+    margin-top: 1.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    margin-right: 0.5rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+button {
+    background-color: #4b6584;
+    color: #f8f9fa;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #34495e;
+}
+
+.download {
+    background-color: #c1956d;
+    color: white;
+}
+
+.download:hover {
+    background-color: #a97e58;
+}
+
+/* Untuk mengatur teks dan gambar tetap sejajar */
+.content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex: 1;
+    text-align: left; /* Tetap kiri pada layar besar */
+}
+
+.c1 {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 200px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex: 1;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: Arial;
+    color: #333;
+  }
+
+.highlight {
+    color: #c1956d;
+}
+
+.role {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+.description {
+    margin-top: 1rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444;
+}
+
+.content-box {
+    background-color: #f4f4f9;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+table th {
+    background-color: #4b6584;
+    color: white;
+}
+
+.more {
+    background-color: #333;
+    color: white;
+}
+
+.more:hover {
+    background-color: #555;
+}
+
+.profile-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 1rem;
+    color: #c1956d;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #a97e58;
+} 
+
+.social-links a {
+    margin: 0px;
+    font-size: 3px; /* Ukuran ikon */
+    color: #333; /* Warna ikon */
+    transition: color 0.3s;
+    display: inline-block
+}
+
+.social-links a:hover {
+    color: #bfa87a; /* Warna ikon saat hover */
+    transform: scale(1.1);  /* Efek zoom saat hover */
+}
+
+.social-links img.icon {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.hero-section {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    max-width: 900px;
+    width: 100%;
+    margin-top: 150px;
+}
+
+/* Untuk memusatkan gambar profil dan ikon sosial */
+.profile-img,
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-img img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Atur ulang tampilan untuk layar kecil */
+@media (max-width: 768px) {
+    .hero-section {
+        flex-direction: column; /* Menyusun secara vertikal */
+        align-items: center; /* Pusatkan konten */
+        text-align: center; /* Pusatkan teks */
+    }
+
+    .content {
+        text-align: center; /* Pusatkan teks pada layar kecil */
+    }
+
+    .social-links {
+        margin-top: 1rem; /* Memberi jarak di bawah gambar profil */
+    }
+}
+
+/* Styling untuk bagian Pendidikan */
+.education-section {
+    max-width: 800px;
+    margin: 150px auto 20px; /* Jarak dari atas untuk memperhitungkan header */
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.education-section h2 {
+    font-size: 2rem;
+    color: #4b6584;
+    margin-bottom: 20px;
+}
+
+.education-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.education-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+.education-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.education-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .education-section {
+        padding: 10px;
+    }
+
+    .education-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .education-item p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Styling untuk bagian Aktivitas */
+.activity-section {
+    max-width: 800px;
+    margin: 200px auto 20px; /* Jarak dari atas */
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.activity-section h2 {
+    font-size: 2rem;
+    color: #4b6584;
+    margin-bottom: 20px;
+}
+
+.activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.activity-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+.activity-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.activity-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .activity-section {
+        padding: 10px;
+    }
+
+    .activity-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .activity-item p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Styling untuk bagian Portofolio */
+.portfolio-section {
+    max-width: 800px;
+    margin: 100px auto 20px;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.portfolio-section h2 {
+    font-size: 2rem;
+    color: #4b6584;
+    margin-bottom: 20px;
+}
+
+.portfolio-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.portfolio-item {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    text-align: left;
+}
+
+.portfolio-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.portfolio-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .portfolio-section {
+        padding: 10px;
+    }
+
+    .portfolio-item h3 {
+        font-size: 1.3rem;
+    }
+
+    .portfolio-item p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Styling untuk bagian Jadwal */
+.schedule-section {
+    max-width: 900px;
+    margin: 170px auto;
+    padding: 60px;
+    background-color: #f4f4f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.schedule-section h2 {
+    font-size: 2rem;
+    color: #4b6584;
+    margin-bottom: 20px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.schedule-table th, .schedule-table td {
+    padding: 20px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.schedule-table th {
+    background-color: #4b6584;
+    color: #fff;
+    font-weight: bold;
+}
+
+.schedule-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.schedule-table tr:hover {
+    background-color: #e3e3e3;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .schedule-section {
+        padding: 10px;
+    }
+
+    .schedule-table th, .schedule-table td {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Styling untuk bagian contact form */
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px;
+    background-color: #f4f4f9;
+}
+
+.contact-form {
+    background-color: #fff;
+    padding: 30px;
+    max-width: 650px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.contact-form h2 {
+    color: #4b6584;
+    margin-bottom: 20px;
+}
+
+.contact-form p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.contact-form label {
+    font-size: 1rem;
+    color: #333;
+    text-align: left;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #4b6584;
+    outline: none;
+}
+
+.contact-form button {
+    background-color: #4b6584;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #3b4a64;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .contact-container {
+        padding: 20px;
+    }
+    
+    .contact-form {
+        padding: 20px;
+    }
+
+    .contact-nav a {
+        font-size: 0.9rem;
+        padding: 3px 7px;
+    }
+}
+
+
+footer {
+    background-color: #4b6584;
+    color: #f8f9fa;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.2);
+}
